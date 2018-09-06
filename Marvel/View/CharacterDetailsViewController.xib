@@ -15,7 +15,7 @@
                 <outlet property="characterImageView" destination="Ak0-sW-LDj" id="Onn-mS-9gD"/>
                 <outlet property="characterName" destination="J7B-23-HK8" id="7dF-PR-0yH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="webView" destination="KN5-Jq-L7d" id="h2N-yb-SUj"/>
+                <outlet property="webView" destination="qX2-XG-8XZ" id="rLh-4s-ZlA"/>
                 <outlet property="wikiButton" destination="SfV-yP-Jmp" id="MtA-KZ-i92"/>
             </connections>
         </placeholder>
@@ -31,14 +31,6 @@
                         <constraint firstAttribute="height" constant="140" id="Zzp-wV-j0e"/>
                     </constraints>
                 </imageView>
-                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-Jq-L7d">
-                    <rect key="frame" x="16" y="262" width="343" height="385"/>
-                    <color key="backgroundColor" red="0.89231840285612507" green="0.89231840285612507" blue="0.89231840285612507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <wkWebViewConfiguration key="configuration">
-                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                        <wkPreferences key="preferences"/>
-                    </wkWebViewConfiguration>
-                </wkWebView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z1x-pL-KjZ">
                     <rect key="frame" x="164" y="184" width="46" height="70"/>
                     <subviews>
@@ -57,17 +49,21 @@
                         </button>
                     </subviews>
                 </stackView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX2-XG-8XZ">
+                    <rect key="frame" x="16" y="262" width="343" height="385"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Z1x-pL-KjZ" firstAttribute="centerX" secondItem="Ak0-sW-LDj" secondAttribute="centerX" id="0KW-IJ-GRj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KN5-Jq-L7d" secondAttribute="bottom" constant="20" id="44m-id-8ky"/>
+                <constraint firstItem="qX2-XG-8XZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0qE-qs-1PY"/>
                 <constraint firstItem="Ak0-sW-LDj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9bZ-Cf-1J8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qX2-XG-8XZ" secondAttribute="bottom" constant="20" id="A3z-SI-jqS"/>
                 <constraint firstItem="Ak0-sW-LDj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="F00-D8-j3m"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KN5-Jq-L7d" secondAttribute="trailing" constant="16" id="Krb-WZ-OCI"/>
-                <constraint firstItem="KN5-Jq-L7d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bTs-e2-hrF"/>
+                <constraint firstItem="qX2-XG-8XZ" firstAttribute="top" secondItem="Z1x-pL-KjZ" secondAttribute="bottom" constant="8" id="aKU-27-rrK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qX2-XG-8XZ" secondAttribute="trailing" constant="16" id="g2n-75-HDy"/>
                 <constraint firstItem="Z1x-pL-KjZ" firstAttribute="top" secondItem="Ak0-sW-LDj" secondAttribute="bottom" constant="8" id="zEj-J1-6rV"/>
-                <constraint firstItem="KN5-Jq-L7d" firstAttribute="top" secondItem="Z1x-pL-KjZ" secondAttribute="bottom" constant="8" id="zbZ-Cb-Ygq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
