@@ -13,9 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let mainVC = CharacterListTableViewController()
+        mainVC.navigationItem.title = "Characters"
+        window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
